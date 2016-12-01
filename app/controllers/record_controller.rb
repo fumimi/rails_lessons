@@ -1,4 +1,9 @@
 class RecordController < ApplicationController
+  
+  def findall
+    @books = Book.all
+    render 'hello/list'
+  end
 
   def find
     @books = Book.find([2, 5, 10])
